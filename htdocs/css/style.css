@@ -678,8 +678,8 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   margin: 0 10px;
 }
 .row {
-  display: flex;
-  flex-flow: row wrap;
+  display: block;
+  width: 102.08333333%;
   margin-left: -1.04166667%;
   margin-right: -1.04166667%;
 }
@@ -696,7 +696,8 @@ a:visited {
   color: #5F5F5F;
 }
 header {
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 97.91666667%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
@@ -724,7 +725,8 @@ header .navbar2 {
   text-decoration: none;
 }
 main article {
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 97.91666667%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
@@ -734,8 +736,8 @@ main article {
   padding: 10px;
 }
 .footer {
-  display: flex;
-  flex-flow: row wrap;
+  display: block;
+  width: 102.08333333%;
   margin-left: -1.04166667%;
   margin-right: -1.04166667%;
 }
@@ -755,16 +757,17 @@ main article {
 }
 .footer .footer-column-wrapper {
   text-align: center;
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 97.91666667%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
 }
 .footer .footer-column-wrapper .footer-column {
-  float: left;
   border: 1px solid black;
   box-sizing: border-box;
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 31.25%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
@@ -786,8 +789,8 @@ main article {
   }
 }
 .route-grid .article {
-  display: flex;
-  flex-flow: row wrap;
+  display: block;
+  width: 102.08333333%;
   margin-left: -1.04166667%;
   margin-right: -1.04166667%;
   width: 100%;
@@ -803,7 +806,8 @@ main article {
   clear: both;
 }
 .route-grid .article .grid-sidebar {
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 31.25%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
@@ -813,20 +817,23 @@ main article {
   width: 230px;
 }
 .route-grid .article .grid-content {
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 64.58333333%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
 }
 @media (max-width: 800px) {
   .route-grid .article .grid-content {
-    flex: 0 0 auto;
+    display: inline;
+    float: left;
     width: 97.91666667%;
     margin-left: 1.04166667%;
     margin-right: 1.04166667%;
   }
   .route-grid .article .grid-sidebar {
-    flex: 0 0 auto;
+    display: inline;
+    float: left;
     width: 97.91666667%;
     margin-left: 1.04166667%;
     margin-right: 1.04166667%;
@@ -840,7 +847,8 @@ table {
   margin: 0 auto;
 }
 .flash-wrap {
-  flex: 0 0 auto;
+  display: inline;
+  float: left;
   width: 97.91666667%;
   margin-left: 1.04166667%;
   margin-right: 1.04166667%;
@@ -1216,17 +1224,132 @@ html hr:after {
 /** --------------------------------------------------------------
  *  Header styles
  */
+.analysis-img-wrapper img {
+  width: 100%;
+}
+.color-scheme-wrapper {
+  height: 42px;
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid black;
+}
+.color-scheme-wrapper .scheme-color {
+  height: 42px;
+  width: 42px;
+  display: inline-block;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.color-scheme-wrapper .bk1 {
+  background-color: #660000;
+}
+.color-scheme-wrapper .bk2 {
+  background-color: #F9BE00;
+}
+.color-scheme-wrapper .bk3 {
+  background-color: #E02312;
+}
+.color-scheme-wrapper .bk4 {
+  background-color: #155CA7;
+}
+.color-scheme-wrapper .bk5 {
+  background-color: #A71D19;
+}
+.color-scheme-wrapper .py1 {
+  background-color: #224A6B;
+}
+.color-scheme-wrapper .py2 {
+  background-color: #1E2933;
+}
+.color-scheme-wrapper .py3 {
+  background-color: #3572A5;
+}
+.color-scheme-wrapper .py4 {
+  background-color: #FFDC53;
+}
+.color-scheme-wrapper .py5 {
+  background-color: #75A8D3;
+}
+.color-scheme-wrapper .hi1 {
+  background-color: #1A96D3;
+}
+.color-scheme-wrapper .hi2 {
+  background-color: #92C5E8;
+}
+.color-scheme-wrapper .hi3 {
+  background-color: #0092D5;
+}
+.color-scheme-wrapper .hi4 {
+  background-color: #333333;
+}
+.color-scheme-wrapper .hi5 {
+  background-color: #FCFFFF;
+}
+.color-scheme-wrapper .mm1 {
+  background-color: #D10E13;
+}
+.color-scheme-wrapper .mm2 {
+  background-color: #000000;
+}
+.color-scheme-wrapper .mm3 {
+  background-color: #FFFFFF;
+}
+.color-scheme-wrapper .mm4 {
+  background-color: #DF0101;
+}
+.color-scheme-wrapper .mm5 {
+  background-color: #61BF22;
+}
 .site-header {
   height: 80px;
+}
+.sidebar-left {
+  display: inline;
+  float: left;
+  width: 14.58333333%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
+}
+.route-report-kmom01 article,
+.route-report-kmom02 article,
+.route-report-kmom03 article,
+.route-report-kmom04 article,
+.route-report-kmom05 article,
+.route-report-kmom06 article,
+.route-report-kmom10 article,
+.route-analysis-colorscheme article {
+  display: inline;
+  float: left;
+  width: 81.25%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
+  box-sizing: border-box;
+  border-left: 1px dashed black;
+  border-right: 1px dashed black;
+  border-radius: 15px;
+  padding: 0 1em;
+}
+.next,
+.previous {
+  display: inline-block;
+}
+.next {
+  float: right;
+}
+.previous {
+  float: left;
 }
 .site-logo-text,
 .navbar2,
 .profile {
   float: left;
-  width: 35%;
+}
+.navbar2 {
+  width: 80% !important;
 }
 .site-logo-text {
   font-size: 2em;
+  width: 20%;
 }
 .site-logo-text a {
   text-decoration: none;

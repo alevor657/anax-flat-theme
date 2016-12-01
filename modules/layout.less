@@ -1,3 +1,6 @@
+@navbarBorderBottom: black;
+@footerColumnWrapperBorder: 1px solid black;
+
 .inner-wrap {
     .container();
     max-width: 960px;
@@ -26,7 +29,7 @@ header {
     // background-color: #CFDBE7;
     .rm-default li {
                 &:hover {
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid @navbarBorderBottom;
                 }
                 a {
                     background-color: inherit;
@@ -37,7 +40,7 @@ header {
         }
 
     .navbar2 {
-        width: 50%;
+        // width: 50%;
     }
     }
 
@@ -82,7 +85,7 @@ main article {
         .column(12);
         .footer-column {
         float: left;
-        border: 1px solid black;
+        border: @footerColumnWrapperBorder;
         box-sizing: border-box;
         .column(4);
         }
@@ -94,10 +97,13 @@ main article {
 }
 
 .route-grid {
+    .outer-wrap-main {
+        background-color: transparent;
+    }
     .showGrid();
 
     .article {
-        .row();
+        // .row();
         width: 100%;
 
         .grid-sidebar {
@@ -156,5 +162,8 @@ html {
 }
 
 .route-typography {
+    .outer-wrap-main {
+        background-color: transparent;
+    }
     .showHorizontalGrid();
 }
