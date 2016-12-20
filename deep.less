@@ -1,0 +1,33 @@
+@import url(modules.less);
+@import url(style.less);
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: 2px 2px 8px @mainColor;
+}
+
+article {
+    box-shadow: 5px 5px 8px 4px grey;
+}
+
+.byline {
+    width: 80%;
+    box-shadow: 5px 5px 8px 4px grey;
+    margin: 2em auto;
+}
+
+.footer-column {
+    box-shadow: 5px 5px 8px 4px grey;
+}
+
+.rm-navbar-top {
+    a {
+        text-shadow: 2px 2px 8px black;
+        transition: margin-bottom 2s ease, font-size 2s ease;
+        max-width: 75px;
+
+        &:hover {
+            margin-bottom: 15px;
+            font-size: 16pt;
+        }
+    }
+}

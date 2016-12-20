@@ -31,9 +31,10 @@
 /**
  * Wrap grid in a container.
  */
-.container() {
+.grid(@maxWidth: 960px) {
     margin-right: auto;
     margin-left: auto;
+    max-width: @maxWidth;
 }
 
 
@@ -44,10 +45,12 @@
 .row(@columns: @columns) {
     display: block;
 
-    width: @totalWidth * (@gridSystemWidth + @gutterWidth);
+    // width: @totalWidth * (@gridSystemWidth + @gutterWidth);
 
-    margin-left:  -1 * @totalWidth * @gutterWidth / 2;
-    margin-right: -1 * @totalWidth * @gutterWidth / 2;
+    // margin-left:  -1 * @totalWidth * @gutterWidth / 2;
+    // margin-right: -1 * @totalWidth * @gutterWidth / 2;
+    margin-left: auto;
+    margin-right: auto;
 
     .clearfix();
 }
@@ -65,6 +68,8 @@
 
     margin-left:  @totalWidth * @gutterWidth / 2;
     margin-right: @totalWidth * @gutterWidth / 2;
+    // margin-right: auto;
+    // margin-left: auto;
 }
 
 

@@ -10,6 +10,10 @@
 .site-logo-text {
     font-size: @siteLogoTextSize;
     width: 20%;
+    display: block;
+    margin: auto;
+    float: none;
+    text-align: center;
     a {
         text-decoration: none;
         color: @siteLogoTextColor;
@@ -175,24 +179,38 @@
 
 
 .site-header {
-    height: 80px;
+    height: 120px;
 }
 
 .sidebar-left {
     .column(2);
 }
 
-.route-report,
-.route-report-intro,
-.route-report-kmom01,
-.route-report-kmom02,
-.route-report-kmom03,
-.route-report-kmom04,
-.route-report-kmom05,
-.route-report-kmom06,
-.route-report-kmom10,
-.route-analysis,
-.route-analysis-colorscheme {
+// 11:23 < lrc> angående routestilsättning: body[class*="route-foo-"] { }
+// 11:24 < Losningen> Så typ varje class som faller under foo-?
+// 11:25 < lrc> den kommer matcha alla <body> vars klassnamn innehåller "route-foo-"
+// 11:26 < Back> hmm
+// 11:27 < Back> Kommer den fungera på route-foo bara då med?
+// 11:27 < lrc> nej
+// 11:27 < lrc> ta bort sista bindestrecket i så fall, men då kommer den även matcha t.ex. "route-foobar"
+// 11:28 < Losningen> .route-foo, body[class*="route-foo-"] { }.   ?
+// 11:28 < lrc> men annars är det bara att lägga till body.route-foo
+// 11:28 < lrc> exakt
+
+// .route-report,
+// .route-report-intro,
+// .route-report-kmom01,
+// .route-report-kmom02,
+// .route-report-kmom03,
+// .route-report-kmom04,
+// .route-report-kmom05,
+// .route-report-kmom06,
+// .route-report-kmom10,
+// .route-analysis,
+// .route-analysis-colorscheme
+
+body[class*="route-report"],
+body[class*="route-analysis"] {
    article {
        .column(10);
        box-sizing: border-box;
@@ -215,14 +233,17 @@
     float: left;
 }
 
-.site-logo-text,
-.navbar2,
+// .site-logo-text,
+// .navbar2,
 .profile {
     float: left;
 }
 
 .navbar2 {
-    width: 80%;
+    // width: 100%
+    .column(12);
+    white-space: nowrap;
+    text-align: center;
 }
 
 //Byline
@@ -270,7 +291,7 @@
 .article .about-me{
      p img {
         width: 30%;
-        height: auto;
+        // height: auto;
         float: left;
         margin: auto 1em;
     }
@@ -278,6 +299,8 @@
         min-height: 220px;
     }
 }
+
+
 
 
 /*

@@ -1,0 +1,43 @@
+@import url(light.less);
+@import url(modules.less);
+
+// .wrap-all {
+//     @gridWidth: 100%;
+//     .grid(@gridWidth);
+// }
+
+
+.inner-wrap-header,
+.inner-wrap-footer,
+.inner-wrap-main {
+    .grid(100%)
+}
+
+.outer-wrap {
+    margin: auto 10px;
+}
+
+.outer-wrap-header, .outer-wrap-main, .outer-wrap-footer {
+    background-color: transparent;
+}
+
+.wrap-all {
+    overflow-x: hidden;
+    background-image: url("../img/green.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p, a, a:visited, li, h1, h2, h3, h4, h5, h6, table, pre, time, span {
+    color: white;
+}
+
+code {
+    color: black;
+}
+
+.site-header {
+    p, a, a:visited, li, h1, h2, h3, h4, h5, h6, table, pre {
+        color: black;
+    }
+}

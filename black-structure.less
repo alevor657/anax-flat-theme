@@ -1,0 +1,62 @@
+@import url(modules.less);
+@import url(dark.less);
+
+@keyframes opacity {
+    from {opacity: 1}
+    to {opacity: 0.95}
+}
+
+.inner-wrap {
+
+}
+
+.outer-wrap-header, .outer-wrap-main, .outer-wrap-footer {
+    background-color: transparent;
+}
+
+.wrap-all {
+    background-image: url("../img/blackbg.jpg");
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.site-header {
+    .rm-default {
+        li:hover {
+            border-bottom: 1px solid #8BB01D;
+        }
+    }
+}
+
+.next, .prev {
+    color: #8BB01D;
+}
+
+.article {
+    border: 3px solid #8BB01D;
+    border-radius: 5px;
+
+    ul, ol {
+        list-style-position: inside;
+    }
+
+    hr::after {
+        position: static;
+        color: white;
+        top: auto;
+        left: auto;
+        background-color: transparent;
+    }
+}
+
+.wrap-all {
+    text-align: center;
+}
+
+.inner-wrap-header {
+    border: 3px solid #8BB01D;
+    border-radius: 5px;
+}

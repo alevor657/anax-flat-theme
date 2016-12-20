@@ -1,0 +1,29 @@
+@import url(modules.less);
+@import url(style.less);
+
+.colorFromTo(@from, @to: lighten(@from, 100%)) {
+    from {background-color: @from}
+    to {background-color: @to}
+}
+
+@keyframes color {
+    .colorFromTo(@mainColor);
+}
+
+@keyframes colorMain {
+    .colorFromTo(#f2f9dd);
+}
+
+.outer-wrap-header {
+    animation-name: color;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.outer-wrap-main {
+    animation-name: colorMain;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

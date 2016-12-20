@@ -1,9 +1,14 @@
 @navbarBorderBottom: black;
 @footerColumnWrapperBorder: 1px solid black;
+@maxWidth: 960px;
 
 .inner-wrap {
-    .container();
-    max-width: 960px;
+
+    html.vgrid & {
+        .showGrid(@maxWidth);
+    }
+
+    .grid();
 }
 
 .outer-wrap {
@@ -15,7 +20,8 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: lighten(black, 50%);
     color: black;
 }
 
@@ -23,9 +29,11 @@ a&:visited {
     color: #5F5F5F;
 }
 
-header {
+
+//header
+.site-header {
     .column(12);
-    max-height: 60px;
+    // max-height: 60px;
     // background-color: #CFDBE7;
     .rm-default li {
                 &:hover {
@@ -40,7 +48,7 @@ header {
         }
 
     .navbar2 {
-        // width: 50%;
+        float: none;
     }
     }
 
@@ -63,6 +71,8 @@ header {
 
 main article {
     .column(12);
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .sidebar {
@@ -73,7 +83,7 @@ main article {
 }
 
 .footer {
-    .row();
+    // .row();
     // background-color: grey;
     ul {
         list-style: none;
@@ -82,17 +92,21 @@ main article {
 
     .footer-column-wrapper {
         text-align: center;
-        .column(12);
+        // .column(12);
         .footer-column {
-        float: left;
-        border: @footerColumnWrapperBorder;
-        box-sizing: border-box;
-        .column(4);
+            float: left;
+            border: @footerColumnWrapperBorder;
+            box-sizing: border-box;
+            .column(4);
         }
     }
     .site-footer {
-        margin: auto;
+        // margin: auto;
         text-align: center;
+        clear: both;
+        ul {
+            margin: 0;
+        }
     }
 }
 
@@ -100,7 +114,10 @@ main article {
     .outer-wrap-main {
         background-color: transparent;
     }
-    .showGrid();
+
+    // .inner-wrap {
+    //     .showGrid();
+    // }
 
     .article {
         // .row();
@@ -110,9 +127,9 @@ main article {
             .column(4);
             text-align: center;
 
-            img {
-                width: 230px;
-            }
+            // img {
+            //     width: 230px;
+            // }
         }
 
         .grid-content {
@@ -132,9 +149,6 @@ main article {
     }
 }
 
-table {
-    width: 100%;
-}
 .center {
     text-align: center;
     margin: 0 auto;
